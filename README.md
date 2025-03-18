@@ -48,6 +48,8 @@
   - [Traversal/BFS](Algorithms/Searching/Traversal/BFS/Breadth%20First%20Search.md)
   - [Traversal/DFS](Algorithms%5CSearching%5CTraversal%5CDFS%5CDepth%20First%20Search.md)
 
+### [Common Patterns](patterns/README.md)
+
 ## 🔍 Common Operations
 
 ### Data Structure Operations

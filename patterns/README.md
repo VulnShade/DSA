@@ -5,4 +5,6 @@
 - Sliding Window
 - Prefix sum
 
-### Hashing
+### [Hashing](hashing.md)
+- Checking for existence
+- Counting
