@@ -18,6 +18,9 @@ def twoSum(self, nums: List[int], target: int) -> List[int]:
     
     return [-1, -1]
 ```
+
+- Time complexity: O(n) 
+- Space complexity: O(n)
 <br>
 
 ## Counting
@@ -46,6 +49,17 @@ def find_longest_substring(s, k):
         ans = max(ans, right - left + 1)
     
     return ans
+```
+- Time complexity: O(n) 
+- Space complexity: O(k)
+
+### Counter One Liner:
+```python
+from collections import Counter
+
+def areOccurrencesEqual(self, s: str) -> bool:
+    return len(set(Counter(s).values())) == 1
+
 ```
 
 ## 
