@@ -62,4 +62,24 @@ def areOccurrencesEqual(self, s: str) -> bool:
 
 ```
 
-## 
+## Number of subarrays with exact constraint
+<div style="background-color:rgb(219, 216, 216); border-left: 4px solid #ccc; padding: 10px; color: black">
+<b>Given an integer array nums and an integer k, find the number of subarrays whose sum is equal to k.</b>
+</div>
+
+```python
+from collections import defaultdict
+
+class Solution:
+    def subarraySum(self, nums: List[int], k: int) -> int:
+        counts = defaultdict(int)
+        counts[0] = 1
+        ans = curr = 0
+
+        for num in nums:
+            curr += num
+            ans += counts[curr - k]
+            counts[curr] += 1
+    
+        return ans
+```
