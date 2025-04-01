@@ -8,3 +8,6 @@
 ### [Hashing](hashing.md)
 - Checking for existence
 - Counting
+- Number of subarrays
+
+### [Linked-lists]()
