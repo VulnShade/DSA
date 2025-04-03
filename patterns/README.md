@@ -10,4 +10,6 @@
 - Counting
 - Number of subarrays
 
-### [Linked-lists]()
+### [Linked-lists](linked_lists.md)
+- Singly, Doubly
+- Fast, slow pointers
