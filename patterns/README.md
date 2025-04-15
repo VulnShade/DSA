@@ -13,3 +13,8 @@
 ### [Linked-lists](linked_lists.md)
 - Singly, Doubly
 - Fast, slow pointers
+- nth from end
+- Reverse LL
+
+### [Stacks & Queues](stacks_queues.md)
+- String problems
