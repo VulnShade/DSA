@@ -1,5 +1,17 @@
 # Stacks & Queues
 
+> Use Dynamic Arrays
+```python
+stack = []
+
+# Add to stack
+stack.append(<item>)
+
+# Pop stack
+stack.pop()
+```
+
+
 ## String Problems:
 
 <div style="background-color:rgb(219, 216, 216); border-left: 4px solid #ccc; padding: 10px; color: black">
@@ -19,4 +31,21 @@ def removeDuplicates(s):
                 stack.append(c)
         
         return "".join(stack)
+```
+
+<br> 
+<hr>
+
+## Queues 
+> Use deque
+
+```python
+import collection
+queue = collection.deque()
+
+# Enqueue
+queue.append(<item>)
+
+# Dequeue
+queue.popleft()
 ```
