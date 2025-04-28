@@ -49,3 +49,36 @@ queue.append(<item>)
 # Dequeue
 queue.popleft()
 ```
+
+### Monotonic
+>(of a function or quantity) varying in such a way that it either never decreases or never increases.
+```python
+Given an integer array nums
+
+stack = []
+for num in nums:
+    while stack.length > 0 AND stack.top >= num:
+        stack.pop()
+    // Between the above and below lines, do some logic depending on the problem
+    stack.push(num)
+```
+
+<br>
+
+<div style="background-color:rgb(219, 216, 216); border-left: 4px solid #ccc; padding: 10px; color: black">
+Given an array of integers temperatures that represents the daily temperatures, return an array answer such that answer[i] is the number of days you have to wait after the ith day to get a warmer temperature. If there is no future day that is warmer, have answer[i] = 0 instead.
+</div>
+
+```python
+def dailyTemperatures(=temperatures) :
+    stack = []
+    answer = [0] * len(temperatures)
+    
+    for i in range(len(temperatures)):
+        while stack and temperatures[stack[-1]] < temperatures[i]:
+            j = stack.pop()
+            answer[j] = i - j
+        stack.append(i)
+    
+    return answer
+```
