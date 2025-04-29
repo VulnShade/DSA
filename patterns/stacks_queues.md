@@ -82,3 +82,34 @@ def dailyTemperatures(=temperatures) :
     
     return answer
 ```
+
+<br>
+<div style="background-color:rgb(219, 216, 216); border-left: 4px solid #ccc; padding: 10px; color: black">
+<b>Example: Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit</b>
+Given an array of integers nums and an integer limit, return the size of the longest subarray such that the absolute difference between any two elements of this subarray is less than or equal to limit.
+</div>
+
+```python
+def maxSlidingWindow(nums, k)
+    ans = []
+    queue = deque()
+    for i in range(len(nums)):
+        # maintain monotonic decreasing.
+        # all elements in the deque smaller than the current one
+        # have no chance of being the maximum, so get rid of them
+        while queue and nums[i] > nums[queue[-1]]:
+            queue.pop()
+
+        queue.append(i)
+
+        # queue[0] is the index of the maximum element.
+        # if queue[0] + k == i, then it is outside the window
+        if queue[0] + k == i:
+            queue.popleft()
+        
+        # only add to the answer once our window has reached size k
+        if i >= k - 1:
+            ans.append(nums[queue[0]])
+
+    return ans
+```
